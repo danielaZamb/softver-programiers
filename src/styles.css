@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+a.nav-link {
+    color: #109CAD;
+  }
+  
+a.nav-link:hover, .nav-link:focus{
+    color: #B11284;
+  }
+
+.nav.nav-underline {
+    color: #109CAD;
+}  
+
+.fs-6 {
+    font-size: 5pt;
+}
+
+footer.bg-primary {
+    background-color: #109CAD !important;
+  }
