@@ -24,3 +24,20 @@ footer.bg-primary {
     height: 200px;
     object-fit: cover;
 }
+
+a.btn-primary {
+    color: #ffffff;
+    background-color: #B11284;
+    border-color: #B11284;
+}
+
+a.btn-primary:hover, .btn-primary:focus {
+    color: #ffffff;
+    background-color: #B11284;
+    border-color: #B11284;
+    background: #B11284;
+}
+
+a.btn {
+    border-radius: 30px;
+}
