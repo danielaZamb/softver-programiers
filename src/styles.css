@@ -41,3 +41,17 @@ a.btn-primary:hover, .btn-primary:focus {
 a.btn {
     border-radius: 30px;
 }
+
+.imagen-comment { 
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.box-size {
+    width: 16rem;
+}
+
+.box-size-comment {
+    width: 20rem;
+}
