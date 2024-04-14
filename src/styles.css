@@ -18,3 +18,9 @@ a.nav-link:hover, .nav-link:focus{
 footer.bg-primary {
     background-color: #109CAD !important;
   }
+
+.imagen-principal { 
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
