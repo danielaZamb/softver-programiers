@@ -15,6 +15,8 @@ import { CommentServices } from './comment.services';
 import { FormsModule } from '@angular/forms';
 import { UserServices } from './user.service';
 import { ViewerComponent } from './viewer/viewer.component';
+import { AdminServiciosComponent } from './admin/admin-servicios/admin-servicios.component';
+import { AdminUsuariosComponent } from './admin/admin-usuarios/admin-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ViewerComponent } from './viewer/viewer.component';
     ContactFormComponent,
     LoginFormComponent,
     SignFormComponent,
-    ViewerComponent
+    ViewerComponent,
+    AdminServiciosComponent,
+    AdminUsuariosComponent
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,11 @@ export class LoginFormComponent implements OnInit {
   ingresar() {
     this.userServicio.users.filter((user) => {
       if (user.email === this.inputEmail && user.contrasena === this.inputPassword) {
-        this.router.navigate(['viewer']);
+        if(user.rol === 'Administrator') {
+          this.router.navigate(['admin-services']);
+        } else if(user.rol === 'Viewer') {
+          this.router.navigate(['viewer']);
+        }
       }
     });
 

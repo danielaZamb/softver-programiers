@@ -5,6 +5,8 @@ import { ContactFormComponent } from './formularios/contact-form/contact-form.co
 import { LoginFormComponent } from './formularios/login-form/login-form.component';
 import { SignFormComponent } from './formularios/sign-form/sign-form.component';
 import { ViewerComponent } from './viewer/viewer.component';
+import { AdminUsuariosComponent } from './admin/admin-usuarios/admin-usuarios.component';
+import { AdminServiciosComponent } from './admin/admin-servicios/admin-servicios.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,12 @@ const routes: Routes = [
   },
   {
     path: 'viewer', component: ViewerComponent
+  },
+  {
+    path: 'admin-services', component: AdminServiciosComponent
+  },
+  {
+    path: 'admin-users', component: AdminUsuariosComponent
   }
 ];
 
