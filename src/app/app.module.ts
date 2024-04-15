@@ -13,6 +13,7 @@ import { LoginFormComponent } from './formularios/login-form/login-form.componen
 import { SignFormComponent } from './formularios/sign-form/sign-form.component';
 import { CommentServices } from './comment.services';
 import { FormsModule } from '@angular/forms';
+import { UserServices } from './user.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [CommentServices],
+  providers: [CommentServices, UserServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
