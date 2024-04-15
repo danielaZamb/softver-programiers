@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommentServices } from '../comment.services';
+import { Comment } from './comment.model';
 
 @Component({
   selector: 'app-comment',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentComponent implements OnInit {
 
-  constructor() { }
+  //arreglo vacio
+  comments: Comment[] = [];
+
+  constructor(private commentServices: CommentServices) { }
 
   ngOnInit(): void {
-  }
+    this.comments = this.commentServices.comments; //este es un paso por referencia para inicializar el arreglo
+  } 
 
 }

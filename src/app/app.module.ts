@@ -11,6 +11,8 @@ import { CommentComponent } from './comment/comment.component';
 import { ContactFormComponent } from './formularios/contact-form/contact-form.component';
 import { LoginFormComponent } from './formularios/login-form/login-form.component';
 import { SignFormComponent } from './formularios/sign-form/sign-form.component';
+import { CommentServices } from './comment.services';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,10 @@ import { SignFormComponent } from './formularios/sign-form/sign-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CommentServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
