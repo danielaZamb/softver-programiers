@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContactFormComponent } from './formularios/contact-form/contact-form.component';
 import { LoginFormComponent } from './formularios/login-form/login-form.component';
+import { SignFormComponent } from './formularios/sign-form/sign-form.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path:'login', component: LoginFormComponent
+  },
+  {
+    path: 'sign', component: SignFormComponent
   }
 ];
 
