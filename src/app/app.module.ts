@@ -14,6 +14,7 @@ import { SignFormComponent } from './formularios/sign-form/sign-form.component';
 import { CommentServices } from './comment.services';
 import { FormsModule } from '@angular/forms';
 import { UserServices } from './user.service';
+import { ViewerComponent } from './viewer/viewer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UserServices } from './user.service';
     CommentComponent,
     ContactFormComponent,
     LoginFormComponent,
-    SignFormComponent
+    SignFormComponent,
+    ViewerComponent
   ],
   imports: [
     BrowserModule,

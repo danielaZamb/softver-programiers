@@ -2,14 +2,14 @@
   <div class="row justify-content-md-center">
     <div class="col-md-4">
       <h1 class="text-center py-4 px-4"><strong>Iniciar Sesión</strong></h1>
-      <form class="py-4">
+      <form class="py-4" (ngSubmit)="f.form.valid && ingresar()" #f="ngForm">
         <div class="mb-3">
           <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail" name="inputEmail">
+          <input type="email" class="form-control" id="inputEmail" name="inputEmail" [(ngModel)]="inputEmail" required />
         </div>
         <div class="mb-3">
           <label for="inputPassword" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="inputPassword" name="inputPassword">
+          <input type="password" class="form-control" id="inputPassword" name="inputPassword" [(ngModel)]="inputPassword" required />
         </div>
         <div class="text-center py-4">
           <button type="submit" class="btn btn-primary"><i class="bi bi-person-circle me-2"></i>Ingresar</button>
