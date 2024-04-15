@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { CommentComponent } from './comment/comment.component';
+import { ContactFormComponent } from './formularios/contact-form/contact-form.component';
+import { LoginFormComponent } from './formularios/login-form/login-form.component';
+import { SignFormComponent } from './sign-form/sign-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { CommentComponent } from './comment/comment.component';
     FooterComponent,
     InicioComponent,
     ServiciosComponent,
-    CommentComponent
+    CommentComponent,
+    ContactFormComponent,
+    LoginFormComponent,
+    SignFormComponent
   ],
   imports: [
     BrowserModule,

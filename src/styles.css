@@ -3,7 +3,7 @@ a.nav-link {
     color: #109CAD;
   }
   
-a.nav-link:hover, .nav-link:focus{
+a.nav-link:hover, a.nav-link:focus {
     color: #B11284;
   }
 
@@ -25,20 +25,20 @@ footer.bg-primary {
     object-fit: cover;
 }
 
-a.btn-primary {
+a.btn-primary, button.btn-primary {
     color: #ffffff;
     background-color: #B11284;
     border-color: #B11284;
 }
 
-a.btn-primary:hover, .btn-primary:focus {
+a.btn-primary:hover, .btn-primary:focus, button.btn-primary:hover, button.btn-primary:focus {
     color: #ffffff;
     background-color: #B11284;
     border-color: #B11284;
     background: #B11284;
 }
 
-a.btn {
+a.btn, button.btn {
     border-radius: 30px;
 }
 
