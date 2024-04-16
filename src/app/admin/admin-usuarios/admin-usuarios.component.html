@@ -1,1 +1,57 @@
-<p>admin-usuarios works!</p>
+<div class="container text-center px-4 py-4">
+    <div class="row justify-content-md-center">
+
+        <div class="col">
+            <h1 class="mb-4 pb-4"><strong>Editar Usuarios</strong></h1>
+        </div>
+
+        <div class="row justify-content-end">
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Ingrese email del usuario" id="searchEmail"
+                        name="searchEmail" />
+                    <button class="input-group-text" (click)="search()"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-5">
+        <div class="row">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Rol del usuario</th>
+                        <th scope="col">Celular</th>
+                        <th scope="col">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!--listado de usuarios-->
+                    <tr *ngFor="let usuario of usuarios">
+                        <td scope="row">{{usuario.nombre}}</td>
+                        <td>{{usuario.email}}</td>
+                        <td>{{usuario.rol}}</td>
+                        <td>{{usuario.celular}}</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-gear-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-pen-fill"></i>Editar</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-trash-fill"></i>Eliminar</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

@@ -22,7 +22,7 @@ export class SignFormComponent implements OnInit {
 
   //Funcion para agregar usuario
   addUser() {
-    this.userServicio.users.push(new User(this.inputName, this.inputEmail, this.inputPassword, "Viewer"));
+    this.userServicio.users.push(new User(this.inputName, this.inputEmail, this.inputPassword, "Viewer", ""));
     alert("Usuario registrado");
     this.router.navigate(['login']);
   }
