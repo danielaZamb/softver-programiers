@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ServicioServices } from './servicio.service';
 import { Servicio } from './servicio.model';
 
@@ -11,6 +11,9 @@ export class ServiciosComponent implements OnInit {
 
   //Array de servicios
   servicios : Servicio[];
+
+  @Input() iconType: string;
+  @Input() buttonName : string;
 
   constructor(private servicioServices: ServicioServices) { }
 

@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
+  nameBtn : string = 'Ver';
+  iconBtn : string = 'bi-eye'
+
   constructor() { }
 
   ngOnInit(): void {
