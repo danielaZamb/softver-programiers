@@ -14,20 +14,55 @@
     </div>
     <div class="col px-2">
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav nav-underline justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="" ariaCurrentWhenActive="page">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contact" ariaCurrentWhenActive="page">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/login" ariaCurrentWhenActive="page">Iniciar sesión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/sign" ariaCurrentWhenActive="page">Registrarse</a>
-          </li>
-        </ul>
+
+        <!--menu principal-->
+        <div [ngClass]="{'visually-hidden': router.url === '/viewer' || router.url === '/admin-services' || router.url === '/admin-users'}">
+          <ul class="nav nav-underline justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="" ariaCurrentWhenActive="page">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contact" ariaCurrentWhenActive="page">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login" ariaCurrentWhenActive="page">Iniciar sesión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/sign" ariaCurrentWhenActive="page">Registrarse</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--Menu visualizador-->
+        <div [ngClass]="{'visually-hidden': router.url !== '/viewer'}">
+          <ul class="nav nav-underline justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/viewer" ariaCurrentWhenActive="page">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contact" ariaCurrentWhenActive="page">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login" ariaCurrentWhenActive="page">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--Menu administrador-->
+        <div [ngClass]="{'visually-hidden': router.url !== '/admin-services' && router.url !== '/admin-users'}">
+          <ul class="nav nav-underline justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/admin-services" ariaCurrentWhenActive="page">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/admin-users" ariaCurrentWhenActive="page">Usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login" ariaCurrentWhenActive="page">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </div>
