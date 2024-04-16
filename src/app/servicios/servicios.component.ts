@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicioServices } from './servicio.service';
+import { Servicio } from './servicio.model';
 
 @Component({
   selector: 'app-servicios',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiciosComponent implements OnInit {
 
-  constructor() { }
+  //Array de servicios
+  servicios : Servicio[];
+
+  constructor(private servicioServices: ServicioServices) { }
 
   ngOnInit(): void {
+    //Inicializamos el array
+    this.servicios = this.servicioServices.servicios;
+    console.log(this.servicios.lastIndexOf.toString)
   }
 
 }

@@ -1,56 +1,15 @@
 <div class="row gx-1">
-  <div class="col">
-    <div class="card box-size" >
-        <!--Foto de ThisIsEngineering de Pexels: https://www.pexels.com/es-es/foto/mujer-codificacion-en-computadora-3861958/-->
-      <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Backend"/>
-      <div class="card-body">
-        <h5 class="card-title">Backend</h5>
-        <p class="card-text">
-            La arquitectura interna del sitio que asegura que todos los elementos...
-        </p>
-        <a href="#" class="btn btn-primary"><i class="bi bi-eye px-2"></i>Ver</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="col">
+  <div *ngFor="let servicio of servicios; let i=index" class="col">
     <div class="card box-size">
-        <!--Foto de Antonio Batinić de Pexels: https://www.pexels.com/es-es/foto/internet-tecnologia-ordenador-texto-4164418/-->
-      <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt=".Frontend" />
+      <img src="{{servicio.imagenUrl}}" class="card-img-top" alt="{{servicio.titulo}}" />
       <div class="card-body">
-        <h5 class="card-title">Frontend</h5>
+        <h5 class="card-title"></h5>
         <p class="card-text">
-            La línea de diseño y los elementos gráficos de la página...
+          {{servicio.descripcion}}
         </p>
-        <a href="#" class="btn btn-primary"><i class="bi bi-eye px-2"></i>Ver</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card box-size">
-        <!--Foto de ThisIsEngineering de Pexels: https://www.pexels.com/es-es/foto/ingeniero-de-software-femenino-codificacion-en-computadora-3861972/-->
-      <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Automatización" />
-      <div class="card-body">
-        <h5 class="card-title">Automatización</h5>
-        <p class="card-text">
-            Evaluamos el desempeño del software e identificamos los posibles...
-        </p>
-        <a href="#" class="btn btn-primary"><i class="bi bi-eye px-2"></i>Ver</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card box-size">
-        <!--Foto de olia danilevich de Pexels: https://www.pexels.com/es-es/foto/hombre-escritorio-ordenador-portatil-trabajando-4974914/-->
-      <img src="https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Infraestructura" />
-      <div class="card-body">
-        <h5 class="card-title">Infraestructura</h5>
-        <p class="card-text">
-            La infraestructura de TI puede implementarse en un sistema de...
-        </p>
-        <a href="#" class="btn btn-primary"><i class="bi bi-eye px-2"></i>Ver</a>
+        <a routerLink="{{servicio.page}}" ariaCurrentWhenActive="page" class="btn btn-primary"><i
+            class="bi bi-eye px-2"></i>{{servicio.btoName}}</a>
       </div>
     </div>
   </div>

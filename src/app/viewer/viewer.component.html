@@ -1,1 +1,34 @@
-<p>viewer works!</p>
+<div class="container">
+    <div class="row justify-content-md-center text-center">
+        <div class="col-md-10">
+            <h1><strong>Servicios</strong></h1>
+
+            <h3 class="text-start"><strong>Inscritos</strong></h3>
+
+            <hr>
+
+            <h3 class="text-start"><strong>Otros servicios</strong></h3>
+            <div *ngFor="let servicio of servicios; let i=index" class="card mb-3 w-100">
+                <div class="row g-0">
+                    <div class="col-md-2">
+                        <img src="{{servicio.imagenUrl}}" class="img-fluid" alt="{{servicio.titulo}}">
+                    </div>
+                    <div class="col-md-10 text-start">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h5 class="card-title"><strong>{{servicio.titulo}}</strong></h5>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-cart px-2"></i>Solicitar</a>
+                                </div>
+                            </div>
+                            <p class="card-text">{{servicio.descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

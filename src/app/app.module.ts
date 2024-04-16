@@ -17,6 +17,7 @@ import { UserServices } from './user.service';
 import { ViewerComponent } from './viewer/viewer.component';
 import { AdminServiciosComponent } from './admin/admin-servicios/admin-servicios.component';
 import { AdminUsuariosComponent } from './admin/admin-usuarios/admin-usuarios.component';
+import { ServicioServices } from './servicios/servicio.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { AdminUsuariosComponent } from './admin/admin-usuarios/admin-usuarios.co
     AppRoutingModule,
     FormsModule
   ],
-  providers: [CommentServices, UserServices],
+  providers: [CommentServices, UserServices, ServicioServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
