@@ -8,8 +8,36 @@
         <p class="card-text">
           {{servicio.descripcion}}
         </p>
-        <a routerLink="{{servicio.page}}" ariaCurrentWhenActive="page" class="btn btn-primary"><i
-            class="bi {{iconType}} px-2"></i>{{buttonName}}</a>
+        <button type="submit" (click)="redirigir()" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"><i class="bi {{iconType}} px-2"></i>{{buttonName}}</button>
+
+        <!-- Modal -->
+        <div *ngIf="validar" class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form class="py-4">
+                  <div class="mb-3 text-start">
+                    <label for="inputTitulo" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="inputTitulo" name="inputTitulo" placeholder="{{servicio.titulo}}" readonly/>
+                  </div>
+                  <div class="mb-3 text-start">
+                    <label for="textareaField" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="textareaField" name="textareaField" rows="5"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" (click)="actualizar(servicio)" data-bs-dismiss="modal"><i class="bi bi-pencil-square"></i>Actualizar</button>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -21,4 +21,10 @@ export class ServicioServices {
         });
     }
 
+    
+    actualizar(servicio : Servicio) {
+        let indice = this.servicios.indexOf(servicio);
+        this.servicios[indice] = servicio;
+    }
+
 }
