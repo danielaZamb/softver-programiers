@@ -13,6 +13,8 @@ export class AdminUsuariosComponent implements OnInit {
 
   searchEmail : string;
 
+  usuario : User;
+
   constructor(private userServicios : UserServices) { }
 
   ngOnInit(): void {
@@ -20,9 +22,9 @@ export class AdminUsuariosComponent implements OnInit {
   }
 
   search() {
-
-    this.usuarios.find(user => user.email == this.searchEmail);
-    
+    this.usuario = this.usuarios.find(user => user.email == this.searchEmail)!;  
+    console.log(this.usuario);
+    return this.usuarios.push(this.usuario);
   }
 
 }
